@@ -1,0 +1,13 @@
+<h1>Details</h1>
+
+<dl>
+    <dt>Titel</dt>
+    <dd><?= $this->escapeHtml($this->post->getTitle()) ?></dd>
+
+    <dt>Inhalt</dt>
+    <dd><?= $this->escapeHtml($this->post->getText()) ?></dd>
+
+    <a href="<?= $this->url('myblog/comments', ['id' => $post->getId()]) ?>">
+    comments
+</a>
+</dl>

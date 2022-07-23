@@ -1,0 +1,24 @@
+<?php
+
+$title = 'Kommentare';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+
+<table class="table">
+<tr>
+    <th>Username</th>
+    <th>Kommentar</th>
+</tr>
+<?php foreach ($comments as $blog) : ?>
+    <tr>
+        <td><?= $this->escapeHtml($blog->username) ?></td>
+        <td><?= $this->escapeHtml($blog->comment) ?></td>
+    </tr>
+<?php endforeach; ?>
+
+
+</table>
+<div>
+<a href="<?= $this->url('myblog/addcomment', ['action' => 'addComment']) ?>">Kommentar hinzufügen</a>
+</div>
