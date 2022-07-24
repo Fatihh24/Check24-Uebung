@@ -21,7 +21,7 @@ class PostFieldset extends Fieldset
             'type' => 'text',
             'name' => 'title',
             'options' => [
-                'label' => 'Post Title',
+                'label' => 'Titel',
             ],
         ]);
 
@@ -29,7 +29,7 @@ class PostFieldset extends Fieldset
             'type' => 'textarea',
             'name' => 'text',
             'options' => [
-                'label' => 'Post Text',
+                'label' => 'Inhalt',
             ],
         ]);
     }

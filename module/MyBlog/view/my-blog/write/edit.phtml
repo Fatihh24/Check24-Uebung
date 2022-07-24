@@ -1,9 +1,9 @@
-<h1>Edit blog post</h1>
+<h1>Artikel bearbeiten</h1>
 
 <?php
 $form = $this->form;
 $form->setAttribute('action', $this->url('myblog/edit', [], true));
 echo $this->partial('my-blog/write/form', [
     'form' => $form,
-    'submitLabel' => 'Update post',
+    'submitLabel' => 'Speichern',
 ]);

@@ -53,7 +53,7 @@ class LaminasDbSqlRepository implements PostRepositoryInterface
 
         if (! $result instanceof ResultInterface || ! $result->isQueryResult()) {
             throw new RuntimeException(sprintf(
-                'Failed retrieving blog post with identifier "%s"; unknown database error.',
+                'Unknown database error.',
                 $id
             ));
         }
@@ -64,7 +64,7 @@ class LaminasDbSqlRepository implements PostRepositoryInterface
 
         if (! $post) {
             throw new InvalidArgumentException(sprintf(
-                'Blog post with identifier "%s" not found.',
+                'Artikel konnte nicht gefunden werden',
                 $id
             ));
         }

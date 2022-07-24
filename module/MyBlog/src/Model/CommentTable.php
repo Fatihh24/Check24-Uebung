@@ -26,7 +26,7 @@ class CommentTable
         $row = $rowset->current();
         if (! $row) {
             throw new RuntimeException(sprintf(
-                'Could not find row with identifier %d',
+                'Kommentar konnte nicht gefunden werden %d',
                 $id
             ));
         }
@@ -53,7 +53,7 @@ class CommentTable
             $this->getComment($id);
         } catch (RuntimeException $e) {
             throw new RuntimeException(sprintf(
-                'Cannot update album with identifier %d; does not exist',
+                'Kommentar konnte nicht hinzugefügt werden.',
                 $id
             ));
         }

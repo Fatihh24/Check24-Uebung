@@ -1,15 +1,13 @@
 <?php
-$title = 'Add new album';
+$title = 'Kommentar hinzufügen';
 $this->headTitle($title);
 ?>
 <h1><?= $this->escapeHtml($title) ?></h1>
 <?php
-// This provides a default CSS class and placeholder text for the title element:
 $comment = $form->get('comment');
 $comment->setAttribute('class', 'form-control');
 $comment->setAttribute('placeholder', 'Kommentar');
 
-// This provides a default CSS class and placeholder text for the artist element:
 $article_id = $form->get('article_id');
 $article_id->setAttribute('class', 'form-control');
 $article_id->setAttribute('placeholder', 'Artikel ID');
@@ -18,7 +16,6 @@ $username = $form->get('username');
 $username->setAttribute('class', 'form-control');
 $username->setAttribute('placeholder', 'Username');
 
-// This provides CSS classes for the submit button:
 $submit = $form->get('submit');
 $submit->setAttribute('class', 'btn btn-primary');
 
@@ -27,8 +24,6 @@ $form->prepare();
 
 echo $this->form()->openTag($form);
 ?>
-<?php // Wrap the elements in divs marked as form groups, and render the
-      // label, element, and errors separately within ?>
 <div class="form-group">
     <?= $this->formLabel($comment) ?>
     <?= $this->formElement($comment) ?>

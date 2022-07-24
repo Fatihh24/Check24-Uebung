@@ -21,13 +21,14 @@
         "laminas/laminas-cli": "^1.1.1",
         "laminas/laminas-mvc-plugins": "^1.1.0",
         "laminas/laminas-session": "^2.10.0",
-        "laminas/laminas-di": "^3.2.2"
+        "laminas/laminas-di": "^3.2.2",
+        "laminas/laminas-crypt": "^3.8"
     },
     "autoload": {
         "psr-4": {
             "Application\\": "module/Application/src/",
-            "Blog\\": "module/Blog/src",
-            "MyBlog\\": "module/MyBlog/src"
+            "MyBlog\\": "module/MyBlog/src",
+            "User\\": "module/User/src"
         }
     },
     "autoload-dev": {

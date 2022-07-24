@@ -39,7 +39,7 @@ class CommentController extends AbstractActionController
     public function addCommentAction()
     {
         $form = new CommentForm();
-        $form->get('submit')->setValue('Add');
+        $form->get('submit')->setValue('Hinzufügen');
 
         $request = $this->getRequest();
 

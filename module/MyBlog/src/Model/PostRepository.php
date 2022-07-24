@@ -18,7 +18,7 @@ class PostRepository implements PostRepositoryInterface
     public function findPost($id)
     {
         if (! isset($this->data[$id])) {
-            throw new DomainException(sprintf('Post by id "%s" not found', $id));
+            throw new DomainException(sprintf('Artikel mit der Id "%s" konnte nicht gefunde werden', $id));
         }
 
         return new Post(

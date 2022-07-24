@@ -1,4 +1,4 @@
-<h1>Blog Posts</h1>
+<h1>Alle Artikel</h1>
 
 <div class="list-group">
 <?php foreach ($this->article as $post): ?>
@@ -10,13 +10,13 @@
     </h4>
 
     <div class="btn-group" role="group" aria-label="Post actions">
-      <a class="btn btn-xs btn-default" href="<?= $this->url('myblog/edit', ['id' => $post->getId()]) ?>">Edit</a>
-      <a class="btn btn-xs btn-danger" href="<?= $this->url('myblog/delete', ['id' => $post->getId()]) ?>">Delete</a>
+      <a class="btn btn-xs btn-default" href="<?= $this->url('myblog/edit', ['id' => $post->getId()]) ?>">Bearbeiten</a>
+      <a class="btn btn-xs btn-danger" href="<?= $this->url('myblog/delete', ['id' => $post->getId()]) ?>">Löschen</a>
     </div>
   </div>
 <?php endforeach ?>
 </div>
 
-<div class="btn-group" role="group" aria-label="Post actions">
-  <a class="btn btn-primary" href="<?= $this->url('myblog/add') ?>">Write new post</a>
+<div class="btn-group mt-3" role="group" aria-label="Post actions">
+  <a class="btn btn-primary" href="<?= $this->url('myblog/add') ?>">Artikel erstellen</a>
 </div>

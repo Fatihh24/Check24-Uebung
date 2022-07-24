@@ -32,7 +32,7 @@ class Comment implements InputFilterAwareInterface {
     public function setInputFilter(InputFilterInterface $inputFilter)
     {
         throw new DomainException(sprintf(
-            '%s does not allow injection of an alternate input filter',
+            '%s error',
             __CLASS__
         ));
     }

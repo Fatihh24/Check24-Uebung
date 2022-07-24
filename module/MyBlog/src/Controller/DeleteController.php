@@ -40,7 +40,7 @@ class DeleteController extends AbstractActionController
         }
 
         if ($id != $request->getPost('id')
-            || 'Delete' !== $request->getPost('confirm', 'no')
+            || 'Löschen' !== $request->getPost('confirm', 'no')
         ) {
             return $this->redirect()->toRoute('myblog');
         }

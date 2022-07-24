@@ -32,7 +32,7 @@ class LaminasDbSqlCommand implements PostCommandInterface
 
         if (! $result instanceof ResultInterface) {
             throw new RuntimeException(
-                'Database error occurred during blog post insert operation'
+                'Database Error'
             );
         }
 
@@ -48,7 +48,7 @@ class LaminasDbSqlCommand implements PostCommandInterface
     public function updatePost(Post $post)
     {
         if (! $post->getId()) {
-            throw new RuntimeException('Cannot update post; missing identifier');
+            throw new RuntimeException('Artikel konnte nicht bearbeitet werden.');
         }
     
         $update = new Update('article');
@@ -64,7 +64,7 @@ class LaminasDbSqlCommand implements PostCommandInterface
     
         if (! $result instanceof ResultInterface) {
             throw new RuntimeException(
-                'Database error occurred during blog post update operation'
+                'Database Error'
             );
         }
     
@@ -74,7 +74,7 @@ class LaminasDbSqlCommand implements PostCommandInterface
     public function deletePost(Post $post)
     {
         if (! $post->getId()) {
-            throw new RuntimeException('Cannot delete post; missing identifier');
+            throw new RuntimeException('Artikel konnte nicht gelöscht werden');
         }
     
         $delete = new Delete('article');

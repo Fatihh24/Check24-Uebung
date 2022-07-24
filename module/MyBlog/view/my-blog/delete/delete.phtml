@@ -1,6 +1,6 @@
-<h1>Delete post</h1>
+<h1>Artikel löschen</h1>
 
-<p>Are you sure you want to delete the following post?</p>
+<p>Sind Sie sich sicher, dass Sie diesen Artikel löschen möchten?</p>
 
 <ul class="list-group">
     <li class="list-group-item"><?= $this->escapeHtml($this->post->getTitle()) ?></li>
@@ -8,6 +8,6 @@
 
 <form action="<?php $this->url('myblog/delete', [], true) ?>" method="post">
     <input type="hidden" name="id" value="<?= $this->escapeHtmlAttr($this->post->getId()) ?>" />
-    <input class="btn btn-default" type="submit" name="confirm" value="Cancel" />
-    <input class="btn btn-danger" type="submit" name="confirm" value="Delete" />
+    <input class="btn btn-default mt-3" type="submit" name="confirm" value="Abbrechen" />
+    <input class="btn btn-danger mt-3" type="submit" name="confirm" value="Löschen" />
 </form>
